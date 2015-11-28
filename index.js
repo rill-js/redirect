@@ -8,9 +8,8 @@
  */
 module.exports = function (to, status) {
 	status = status || 301;
-	return function redirect (ctx, next) {
+	return function redirect (ctx) {
 		ctx.res.redirect(to);
 		ctx.res.status = status;
-		return next();
 	}
 };
