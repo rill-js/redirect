@@ -21,6 +21,10 @@ app.get("/from", ({ res })=> {
 	res.redirect("/to");
 	res.status = 302;
 });
+
+// Will not override existing redirects.
+app.get("/from", redirect("/a"));
+app.get("/from", redirect("/b")); // b gets skipped.
 ```
 
 ---

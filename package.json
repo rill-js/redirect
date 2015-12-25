@@ -1,6 +1,6 @@
 {
   "name": "@rill/redirect",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple permanent redirect middleware for Rill.",
   "author": "Dylan Piercey <pierceydylan@gmail.com>",
   "main": "index.js",
