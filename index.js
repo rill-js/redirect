@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * Permanant redirect middleware for Rill.
  *
@@ -7,10 +9,10 @@
  * @api public
  */
 module.exports = function (to, status) {
-	status = status || 301;
-	return function redirect (ctx, next) {
-		if (ctx.res.get("Location")) return next();
-		ctx.res.redirect(to);
-		ctx.res.status = status;
-	}
-};
+  status = status || 301
+  return function redirect (ctx, next) {
+    if (ctx.res.get('Location')) return next()
+    ctx.res.redirect(to)
+    ctx.res.status = status
+  }
+}
